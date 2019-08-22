@@ -51,24 +51,6 @@ void loop() {
   } //get stuck in this loop forever so that the song only plays once
 }
 
-/* CHART OF FREQUENCIES FOR NOTES IN C MAJOR
-Note      Frequency (Hz)
-c        131
-d        147
-e        165
-f        175
-g        196
-a        220
-b        247
-C        262
-D        294
-E        330
-F        349
-G        392
-A        440
-B        494
-*/
-
 void play(char note, int beats) {
   char notes[] = {'c', 'd', 'e', 'f', 'g', 'a', 'b', 'C', 'D', 'E', 'F', 'G', 'A', 'B', ' '};
   int frequencies[] = { 131, 147, 165, 175, 196, 220, 247, 262, 294, 330, 349, 392, 440, 494, 0};
@@ -76,7 +58,7 @@ void play(char note, int beats) {
   int frequency;
 
   // Look up frequency for given note.
-  // TODO: Better to use a C dict/map here?
+  // TODO: Better to use a C enum here?
   for (int i = 0; i < sizeof(notes)/sizeof(notes[0]); i++) {
     if (note == notes[i]) {
 
